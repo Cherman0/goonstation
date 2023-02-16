@@ -119,8 +119,63 @@ ABSTRACT_TYPE(datum/material/metal)
 	name = "Metal"
 	desc = "Abstract metal parent"
 	color = "#8C8C8C"
-	electrical = 6
+
+/datum/material/metal/steel
+	name = "Steel"
+	desc = "Terrestial steel. Hard, machineable, and widely available."
+	color = "#8C8C8C"
+
+/datum/material/metal/copper
+	name = "Copper"
+	desc = "Terrestial copper. Soft, malleable, and both thermally and electrically conductive."
+	color = "#B87333"
 	thermal = 6
+	electrical = 6
+	hard = 4
+	dense = 4
+	chemical = 7
+
+/datum/material/metal/mauxite //space steel
+	name = "Mauxite"
+	desc = "A space ore rich in iron and carbon. Slightly harder than steel when processed."
+	color = "#534747"
+	hard = 6
+
+/datum/material/metal/pharosium //space copper
+	name = "Pharosium"
+	desc = "A space ore rich in copper, with traces of other metals that enhance its conductivity."
+	color = "#B87333"
+	thermal = 7
+	electrical = 7
+	hard = 4
+	dense = 4
+	chemical = 6
+
+/datum/material/metal/cobryl //space silver
+	name = "Cobryl"
+	desc = "A space ore of silver. A powerful conductor, but quite soft and prone to corrosion."
+	color = "#84D5F0"
+	thermal = 6
+	electrical = 8
+	hard = 3
+	dense = 3
+	chemical = 8
+
+/datum/material/metal/gold
+	name = "Gold"
+	desc = "Terrestial gold. Very dense, very soft, and very valuable."
+	color = "#F5BE18"
+	hard = 2
+	dense = 7
+	chemical = 1
+
+/datum/material/metal/syreline
+	name = "Syreline"
+	desc = "A space ore of platinum. Extremely valuable and quite dense."
+	color = "#FAF5D4"
+	hard = 3
+	dense = 8
+	chemical = 1
 
 ABSTRACT_TYPE(datum/material/stone)
 /datum/material/stone
@@ -129,6 +184,11 @@ ABSTRACT_TYPE(datum/material/stone)
 	color = "#ACACAC"
 	electrical = 2
 	thermal = 4
+
+/datum/material/stone/rock
+	name = "Rock"
+	desc = "Just some common space rock."
+	color = "#ACACAC"
 
 ABSTRACT_TYPE(datum/material/crystal)
 /datum/material/crystal
@@ -146,6 +206,7 @@ ABSTRACT_TYPE(/datum/material/fabric)
 	thermal = 2
 	hard = 2
 	dense = 2
+	electrical = 4
 
 ABSTRACT_TYPE(/datum/material/gooey) //fleshy or blobby stuff
 /datum/material/gooey
