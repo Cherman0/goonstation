@@ -1,3 +1,4 @@
+/*
 /datum/trigger_delegate
 	var/datum/owner = null
 	var/procname = null
@@ -1528,3 +1529,4 @@ ABSTRACT_TYPE(/datum/material/rubber)
 		setProperty("n_radioactive", 5)
 		setProperty("radioactive", 3)
 		setProperty("electrical", 7)
+*/
