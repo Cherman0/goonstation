@@ -155,7 +155,7 @@ ABSTRACT_TYPE(datum/material/metal)
 	name = "Cobryl"
 	desc = "A space ore of silver. A powerful conductor, but quite soft and prone to corrosion."
 	color = "#84D5F0"
-	thermal = 6
+	thermal = 7
 	electrical = 8
 	hard = 3
 	dense = 3
@@ -169,13 +169,34 @@ ABSTRACT_TYPE(datum/material/metal)
 	dense = 7
 	chemical = 1
 
-/datum/material/metal/syreline
+/datum/material/metal/electrum
+	name = "Electrum"
+	desc = "A highly conductive alloy of gold and silver."
+	color = "#44ACAC"
+	hard = 3
+	chemical = 4
+
+/datum/material/metal/syreline //space tungsten
 	name = "Syreline"
 	desc = "A space ore of platinum. Extremely valuable and quite dense."
 	color = "#FAF5D4"
 	hard = 3
 	dense = 8
 	chemical = 1
+
+/datum/material/metal/bohrum //space tungsten
+	name = "Bohrum"
+	desc = "A space ore of tungsten. Extremely hard and dense."
+	color = "#3D692D"
+	hard = 7
+	dense = 7
+	chemical = 2
+
+/datum/material/metal/cerenkite
+
+/datum/material/metal/plutonium
+
+/datum/material/metal/plasmasteel
 
 ABSTRACT_TYPE(datum/material/stone)
 /datum/material/stone
@@ -238,4 +259,12 @@ ABSTRACT_TYPE(/datum/material/wood)
 	hard = 4
 	dense = 4
 	flammable = TRUE
+
+//misc materials that dont really count as something else
+
+/datum/material/plastic
+
+/datum/material/negativematter
+
+/datum/material/neutronium
 
