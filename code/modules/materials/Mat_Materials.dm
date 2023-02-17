@@ -421,6 +421,8 @@ ABSTRACT_TYPE(/datum/material/woody)
 
 /datum/material/woody/bamboo
 
+/datum/material/woody/cardboard
+
 //misc materials that dont really count as something else
 
 /datum/material/plastic
@@ -429,6 +431,7 @@ ABSTRACT_TYPE(/datum/material/woody)
 
 /datum/material/neutronium
 
+/datum/material/chitin
 /*
 /datum/trigger_delegate
 	var/datum/owner = null
