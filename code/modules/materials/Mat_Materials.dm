@@ -1,4 +1,5 @@
 ABSTRACT_TYPE(/datum/material)
+/datum/material
 	var/name = "Material" //material name
 	var/desc = "Abstract material parent" //material description
 	//properties scale from 1 to 9 when present, 0 can represent lack of a property (ie radioactive 0 means non radioactive)
@@ -117,17 +118,17 @@ ABSTRACT_TYPE(/datum/material)
 
 ABSTRACT_TYPE(datum/material/metal)
 /datum/material/metal
-	name = "Metal"
+	name = "metal"
 	desc = "Abstract metal parent"
 	color = "#8C8C8C"
 
 /datum/material/metal/steel
-	name = "Steel"
+	name = "steel"
 	desc = "Terrestial steel. Hard, machineable, and widely available."
 	color = "#8C8C8C"
 
 /datum/material/metal/copper
-	name = "Copper"
+	name = "copper"
 	desc = "Terrestial copper. Soft, malleable, and both thermally and electrically conductive."
 	color = "#B87333"
 	thermal = 6
@@ -136,14 +137,14 @@ ABSTRACT_TYPE(datum/material/metal)
 	dense = 4
 	chemical = 7
 
-/datum/material/metal/mauxite //space steel
-	name = "Mauxite"
+/datum/material/metal/mauxite
+	name = "mauxite"
 	desc = "A space ore rich in iron and carbon. Slightly harder than steel when processed."
 	color = "#534747"
 	hard = 6
 
-/datum/material/metal/pharosium //space copper
-	name = "Pharosium"
+/datum/material/metal/pharosium
+	name = "pharosium"
 	desc = "A space ore rich in copper, with traces of other metals that enhance its conductivity."
 	color = "#B87333"
 	thermal = 7
@@ -152,8 +153,8 @@ ABSTRACT_TYPE(datum/material/metal)
 	dense = 4
 	chemical = 6
 
-/datum/material/metal/cobryl //space silver
-	name = "Cobryl"
+/datum/material/metal/cobryl
+	name = "cobryl"
 	desc = "A space ore of silver. A powerful conductor, but quite soft and prone to corrosion."
 	color = "#84D5F0"
 	thermal = 7
@@ -163,7 +164,7 @@ ABSTRACT_TYPE(datum/material/metal)
 	chemical = 8
 
 /datum/material/metal/gold
-	name = "Gold"
+	name = "gold"
 	desc = "Gold. Very dense, very soft, and very valuable."
 	color = "#F5BE18"
 	hard = 2
@@ -171,7 +172,7 @@ ABSTRACT_TYPE(datum/material/metal)
 	chemical = 1
 
 /datum/material/metal/electrum
-	name = "Electrum"
+	name = "electrum"
 	desc = "A highly conductive alloy of gold and silver."
 	color = "#44ACAC"
 	hard = 3
@@ -179,77 +180,77 @@ ABSTRACT_TYPE(datum/material/metal)
 	thermal = 7
 	electrical = 9
 
-/datum/material/metal/syreline //space tungsten
-	name = "Syreline"
+/datum/material/metal/syreline
+	name = "syreline"
 	desc = "A space ore of platinum. Extremely valuable and quite dense."
 	color = "#FAF5D4"
 	hard = 3
 	dense = 7
 	chemical = 1
 
-/datum/material/metal/bohrum //space tungsten
-	name = "Bohrum"
+/datum/material/metal/bohrum
+	name = "bohrum"
 	desc = "A space ore of tungsten. Extremely hard and dense."
 	color = "#3D692D"
 	hard = 7
 	dense = 7
 	chemical = 2
 
-/datum/material/metal/cerenkite //space uranium
-	name = "Cerenkite"
+/datum/material/metal/cerenkite
+	name = "cerenkite"
 	desc = "A space ore of uranium. Moderately radioactive."
 	color = "#CDBDFF"
 	radioactive = 5
 
 /datum/material/metal/plutonium
-	name = "Plutonium"
+	name = "plutonium"
 	desc = "Refined reactor-grade fissile plutonium. Extremely radioactive."
 	color = "#230e4d"
-	density = 8
+	dense = 8
 	hard = 7
 	radioactive = 3
 	neutron = 5
 
 /datum/material/metal/plasmasteel
-	name = "Plasmasteel"
+	name = "plasmasteel"
 	desc = "Terrestial steel alloyed with plasma to give it extreme hardness and density."
 	color = "#937d99"
-	density = 8
+	dense = 8
 	hard = 8
 
 /datum/material/metal/iridium
-	name = "Iridium"
+	name = "iridium"
 	desc = "An extremely rare metal with incredible density and hardness."
 	color = "#756596"
-	density = 9
+	dense = 9
 	hard = 9
 	chemical = 1
 
 /datum/material/metal/soulsteel
-	name = "Soulsteel"
+	name = "soulsteel"
 	desc = "Steel infused with spiritual energy. It's vaguely uncomfortable to be near."
 	color = "#73DFF0"
 
 ABSTRACT_TYPE(datum/material/stone)
 /datum/material/stone
-	name = "Stone"
+	name = "stone"
 	desc = "Abstract stone parent"
 	color = "#ACACAC"
 	electrical = 1
 	thermal = 4
 
 /datum/material/stone/rock
-	name = "Rock"
+	name = "rock"
 	desc = "Just some common space rock."
 	color = "#ACACAC"
 
 /datum/material/stone/miraclium
-	name = "Miraclium"
+	name = "miraclium"
 	desc = "A seemingly impossible substance that transmutes into other materials when energy is applied."
 	color = "#FFFFFF"
 
 /datum/material/stone/plasmastone
-	name = "Plasmastone"
+	name = "plasmastone"
 	desc = "A mineral composed in signifacnt part of plasma. Flammeable and somewhat radioactive."
 	color = "#A114FF"
 	flammable = TRUE
@@ -257,15 +258,25 @@ ABSTRACT_TYPE(datum/material/stone)
 	radioactive = 2
 	chemical = 8
 
+/datum/material/stone/char
+	name = "char"
+	desc = "A fossil fuel ore similar to coal. How it might have formed in space is the subject of ongoing research."
+	color = "#555555"
+	flammable = TRUE
+	electrical = 3
+	chemical = 7
+	dense = 4
+	hard = 3
+
 /datum/material/stone/bone //given its material properties stone seemed like the best fit
-	name = "Bone"
+	name = "bone"
 	desc = "Organic mineral tissue that provides the support structure for vertebrate life."
 	color = "#DDDDDD"
 	hard = 3
 	dense = 3
 
 /datum/material/stone/coral
-	name = "Coral"
+	name = "coral"
 	desc = "A sedimentary deposit of microorganism shells forming a sturdy mass."
 	color = "#990099"
 	texture = "coral"
@@ -274,7 +285,7 @@ ABSTRACT_TYPE(datum/material/stone)
 	hard = 3
 
 /datum/material/stone/slag
-	name = "Slag"
+	name = "slag"
 	desc = "Waste material from refining processes."
 	color = "#26170F"
 	dense = 6
@@ -283,7 +294,7 @@ ABSTRACT_TYPE(datum/material/stone)
 	electrical = 3
 
 /datum/material/stone/slag/spacelag
-	name = "Spacelag"
+	name = "spacelag"
 	desc = "*BUFFERING*"
 	color = "#0F0A08"
 	dense = 9
@@ -292,29 +303,40 @@ ABSTRACT_TYPE(datum/material/stone)
 
 ABSTRACT_TYPE(datum/material/crystal)
 /datum/material/crystal
-	name = "Crystal"
+	name = "crystal"
 	desc = "Abstract crystal parent"
 	color = "#A3DCFF"
 	electrical = 2
 	thermal = 7
 
 /datum/material/crystal/glass
-	name = "Glass"
+	name = "glass"
 	desc = "Terrestial glass. Widely used for windows, computer screens, and the like."
 	color = "#A3DCFF"
+	alpha = 180
 	dense = 4
 
 /datum/material/crystal/molitz
+	name = "molitz"
+	desc = "A common transparent space silicate."
+	color = "#FFFFFF"
+	alpha = 180
+	hard = 6
 
 /datum/material/crystal/molitz/beta
+	name = "molitz beta"
+	desc = "A silicate containing trace amounts of an unknown substance that reacts with plasma. Research into applications is ongoing."
+	color = "#ff2288"
 
 /datum/material/crystal/claretine
+	name = "claretine"
+	desc = "A crystalline substance that exhibits an unusual level of electrical conductivity."
+	color = "#C2280A"
+	electrical = 8
 
 /datum/material/crystal/erebite
 
 /datum/material/crystal/plasmaglass
-
-/datum/material/crystal/diamond
 
 /datum/material/crystal/uqill
 
