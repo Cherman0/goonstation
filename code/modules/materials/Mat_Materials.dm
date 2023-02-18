@@ -308,13 +308,13 @@ ABSTRACT_TYPE(datum/material/crystal)
 	color = "#A3DCFF"
 	electrical = 2
 	thermal = 7
+	chemical = 2
 
 /datum/material/crystal/glass
 	name = "glass"
 	desc = "Terrestial glass. Widely used for windows, computer screens, and the like."
 	color = "#A3DCFF"
 	alpha = 180
-	dense = 4
 
 /datum/material/crystal/molitz
 	name = "molitz"
@@ -333,22 +333,89 @@ ABSTRACT_TYPE(datum/material/crystal)
 	desc = "A crystalline substance that exhibits an unusual level of electrical conductivity."
 	color = "#C2280A"
 	electrical = 8
+	hard = 4
+	dense = 4
+	chemical = 4
 
 /datum/material/crystal/erebite
+	name = "erebite"
+	desc = "An extremely volatile and unstable crystalline formation. Handle with care."
+	color = "#FF3700"
+	dense = 4
+	hard = 2
+	electrical = 6
+	radioactive = 8
+	chemical = 9
 
 /datum/material/crystal/plasmaglass
+	name = "plasmglass"
+	desc = "Terrestial glass alloyed with plasma to give it extreme hardness at a light weight."
+	color = "#A114FF"
+	alpha = 180
+	hard = 8
+	dense = 4
 
 /datum/material/crystal/uqill
+	name = "uqill"
+	desc = "A rare and extremely dense crystal formation."
+	color = "#0F0A08"
+	dense = 8
+	chemical = 1
+	thermal = 4
+
+/datum/material/crystal/uqill/transparent //not sure anything actually uses this
+	name = "uqill glass"
+	desc = "A rare and extremely dense crystal formation that has been treated to be see-through."
+	alpha = 180
 
 /datum/material/crystal/gnesis
+	name = "gnesis"
+	desc = "Data is encoded in the crystalline structure of this material. Flockminds can control radio waves to shape it to their will."
+	color = "#1bdebd"
+	texture = "flock"
+	texture_blend = BLEND_OVERLAY
+	density = 2
+	hard = 6
+	thermal = 3
+	electrical = 8
+	chemical = 1
 
 /datum/material/crystal/gnesis/transparent
+	name = "transparent gnesis"
+	desc = "Data is encoded in the crystalline structure of this material. This particular sample has been programmed to be transparent."
+	alpha = 180
 
 /datum/material/crystal/telecrystal
+	name = "telecrystal"
+	desc = "A crystalline structure of plasma which can connect distant points in space through poorly-understood means."
+	color = "#4C14F5"
+	alpha = 100
+	hard = 3
+	electrical = 5
+	chemical = 7
 
 /datum/material/crystal/starstone
+	name = "starstone"
+	desc = "An extremely rare and valuable space gemostone. Impossibly hard and dense."
+	color = "#B5E0FF"
+	alpha = 80
+	dense = 9
+	hard = 9
+	electrical = 1
+	thermal = 1
+	chemical = 1
 
 /datum/material/crystal/ice
+	name = "ice"
+	desc = "Water solidified into a crystalline form."
+	color = "#E8F2FF"
+	alpha = 100
+	edible = TRUE
+	electrical = 6
+	thermal = 2
+	dense = 1
+	hard = 2
+	chemical = 5
 
 ABSTRACT_TYPE(/datum/material/fabric)
 /datum/material/fabric
