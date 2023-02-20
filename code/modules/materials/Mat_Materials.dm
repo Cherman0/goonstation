@@ -10,6 +10,7 @@ ABSTRACT_TYPE(/datum/material)
 	var/chemical = 5 //how chemically active is it
 	var/radioactive = 0 //how radioactive is it
 	var/neutron = 0 //how neutron radioactive is it
+	var/heatCritical = null //temperature it melts or burns at
 	//crafting flags should go in favor of properties based crafting but thats for a future PR
 	var/material_flags = 0 //bitflag representing crafting material qualities like "High-Energy Conductor"
 	//boolean properties
@@ -374,7 +375,7 @@ ABSTRACT_TYPE(datum/material/crystal)
 	color = "#1bdebd"
 	texture = "flock"
 	texture_blend = BLEND_OVERLAY
-	density = 2
+	dense = 2
 	hard = 6
 	thermal = 3
 	electrical = 8
@@ -425,15 +426,30 @@ ABSTRACT_TYPE(/datum/material/fabric)
 	thermal = 2
 	hard = 2
 	dense = 2
-	electrical = 4
+	electrical = 3
 
 /datum/material/fabric/cotton
+	name = "cotton"
+	desc = "A soft textile harvested from Gossypium plants."
+	color = "#FFFFFF"
+	flammable = TRUE
 
 /datum/material/fabric/wool
+	name = "wool"
+	desc = "A soft textile harvested from mammals such as sheep or goats."
+	color = "#B2ACA0"
+	dense = 3
 
 /datum/material/fabric/wool/bee
+	name = "bee wool"
+	desc = "A soft textile harvested from space bees. Surprisingly thermally conductive."
+	texture = "bee"
+	texture_blend = BLEND_SUBTRACT
+	dense = 2
+	thermal = 7
 
 /datum/material/fabric/leather
+	name = "leather"
 
 /datum/material/fabric/synthleather
 
