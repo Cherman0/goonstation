@@ -450,14 +450,39 @@ ABSTRACT_TYPE(/datum/material/fabric)
 
 /datum/material/fabric/leather
 	name = "leather"
+	desc = "The tanned, dried, scraped, and cured skin of an animal."
+	color = "#8A3B11"
+	dense = 3
+	hard = 3
 
-/datum/material/fabric/synthleather
+/datum/material/fabric/leather/synth
+	name = "synthleather"
+	desc = "An artificial leather created through chemical processes."
+	color = "#BB3B11"
 
-/datum/material/fabric/brullbarhide
+/datum/material/fabric/leather/brullbar
+	name = "brullbar hide"
+	desc = "The thick skin of a slain brullbar."
+	color = "#CCCCCC"
+	dense = 4
+	hard = 4
 
-/datum/material/fabric/brullbarhide/king
+/datum/material/fabric/leather/brullbar/king
+	name = "king brullbar hide"
+	desc = "The impenetrable skin of a slain king brullbar."
+	color = "#EFEEEE"
+	dense = 7
+	hard = 6
+	thermal = 1
+	electrical = 1
 
 /datum/material/fabric/fibrilith
+	name = "fibrilith"
+	desc = "A space ore of asbestos. This fiberous mineral is very insulative but very toxic."
+	color = "#E0FFF6"
+	dense = 3
+	thermal = 1
+	electrical = 1
 
 /datum/material/fabric/silk
 
