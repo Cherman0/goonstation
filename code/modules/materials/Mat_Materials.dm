@@ -10,7 +10,6 @@ ABSTRACT_TYPE(/datum/material)
 	var/chemical = 5 //how chemically active is it
 	var/radioactive = 0 //how radioactive is it
 	var/neutron = 0 //how neutron radioactive is it
-	var/heatCritical = null //temperature it melts or burns at
 	//crafting flags should go in favor of properties based crafting but thats for a future PR
 	var/material_flags = 0 //bitflag representing crafting material qualities like "High-Energy Conductor"
 	//boolean properties
@@ -20,7 +19,6 @@ ABSTRACT_TYPE(/datum/material)
 	var/texture = null //if not null, texture to apply to things with this material
 	var/texture_blend = BLEND_ADD //how to handle applying texture
 	//normal appearence handling
-	var/applyColor = TRUE //Whether it should color things made of it
 	var/color = "#FFFFFF" //hex value of the material color to apply to things
 	var/alpha = 255 //value from 0 to 255 representing transparency, with 255 being fully opaque
 
@@ -485,8 +483,22 @@ ABSTRACT_TYPE(/datum/material/fabric)
 	electrical = 1
 
 /datum/material/fabric/silk
+	name = "silk"
+	desc = "A protein-based textile created by moths and spiders."
+	color = "#CCCCCC"
+	flammable = TRUE
+	hard = 1
+	dense = 1
+	thermal = 3
 
 /datum/material/fabric/nanofiber
+	name = "carbon nanofiber"
+	desc = "A compound material woven out of microscopic carbon fibers. Extremely tough, and conductive."
+	color = "#333333"
+	hard = 7
+	thermal = 8
+	electrical = 8
+	chemical = 1
 
 /datum/material/fabric/hauntium
 
