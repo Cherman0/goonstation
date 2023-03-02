@@ -15,6 +15,7 @@ ABSTRACT_TYPE(/datum/material)
 	//boolean properties
 	var/edible = FALSE //whether you can eat it or not
 	var/flammable = FALSE //whether it burns or not
+	var/energy = FALSE //does this thing work as a power source in batteries and whatnot
 	//unique appearence handling
 	var/texture = null //if not null, texture to apply to things with this material
 	var/texture_blend = BLEND_ADD //how to handle applying texture
@@ -154,10 +155,10 @@ ABSTRACT_TYPE(datum/material/metal)
 
 /datum/material/metal/cobryl
 	name = "cobryl"
-	desc = "A space ore of silver. A powerful conductor, but quite soft and prone to corrosion."
+	desc = "A space ore of silver."
 	color = "#84D5F0"
 	thermal = 7
-	electrical = 8
+	electrical = 7
 	hard = 3
 	dense = 3
 	chemical = 8
@@ -235,7 +236,7 @@ ABSTRACT_TYPE(datum/material/stone)
 	name = "stone"
 	desc = "Abstract stone parent"
 	color = "#ACACAC"
-	electrical = 1
+	electrical = 2
 	thermal = 4
 
 /datum/material/stone/rock
@@ -290,7 +291,7 @@ ABSTRACT_TYPE(datum/material/stone)
 	dense = 6
 	hard = 3
 	chemical = 7
-	electrical = 3
+	electrical = 4
 
 /datum/material/stone/slag/spacelag
 	name = "spacelag"
@@ -441,6 +442,7 @@ ABSTRACT_TYPE(/datum/material/fabric)
 /datum/material/fabric/wool/bee
 	name = "bee wool"
 	desc = "A soft textile harvested from space bees. Surprisingly thermally conductive."
+	color = "#ffcc00"
 	texture = "bee"
 	texture_blend = BLEND_SUBTRACT
 	dense = 2
@@ -501,10 +503,30 @@ ABSTRACT_TYPE(/datum/material/fabric)
 	chemical = 1
 
 /datum/material/fabric/hauntium
+	name = "hauntium"
+	desc = "A fabric infused with spiritual energies. It feels unnaturally light."
+	color = "#8c87b2"
+	dense = 1
+	hard = 1
 
 /datum/material/fabric/ectofiber
+	name = "ectofiber"
+	desc = "A fabric woven from strands of ectoplasm. Incredibly conductive despite being nearly weightless."
+	color = "#ffffff"
+	dense = 1
+	hard = 1
+	thermal = 8
+	electrical = 8
+	radioactive = 3
 
 /datum/material/fabric/dyneema
+	name = "dyneema"
+	desc = "An extremely tough textile woven from carbon nanofibers and silk. Very electricall conductive and thermally insulative."
+	color = "#333333"
+	hard = 8
+	thermal = 1
+	electrical = 8
+	chemical = 1
 
 ABSTRACT_TYPE(/datum/material/gooey) //fleshy or blobby stuff
 /datum/material/gooey
@@ -514,23 +536,69 @@ ABSTRACT_TYPE(/datum/material/gooey) //fleshy or blobby stuff
 	thermal = 2
 	dense = 3
 	hard = 1
+	chemical = 7
 	edible = TRUE
 
 /datum/material/gooey/blob
+	name = "blob"
+	desc = "The intracellular matter of a space macroameboid."
+	color = "#44cc44"
+	alpha = 180
+	texture = "bubbles"
+	texture_blend = BLEND_ADD
+	flammable = TRUE
 
 /datum/material/gooey/flesh
+	name = "flesh"
+	desc = "Non-descript meat from an animal lifeform."
+	color = "#574846"
+	flammable = TRUE
 
 /datum/material/gooey/flesh/butt
+	name = "butt"
+	desc = "Meat from the butt of an animal lifeofrm."
+	color = "#ebbd97"
+	texture = "buttgrey"
+	texture_blend = BLEND_OVERLAY
 
 /datum/material/gooey/viscerite
+	name = "viscerite"
+	desc = "Space biomass shaped into useable forms by Martians."
+	color = "#D04FFF"
+	thermal = 5
+	dense = 4
+	hard = 2
+	chemical = 5
 
 /datum/material/gooey/beeswax
+	name = "beeswax"
+	desc = "Wax created by space bees in order to bind their hives together."
+	color = "#C8BB62"
+	thermal = 1
+	dense = 2
+	chemical = 4
 
 /datum/material/gooey/honey
+	name = "honey"
+	desc = "A sweet substance produced by bees as foodstock."
+	color = "#f1da10"
+	dense = 1
+	chemical = 4
 
 /datum/material/gooey/pizza
+	name = "pizza"
+	desc = "A foodstuff produced from cheese, dough, and tomato sauce. This one has pepperoni on it too."
+	color = "#FFFFFF"
+	texture = "pizza2"
+	texture_blend = BLEND_SUBTRACT
+	dense = 2
 
 /datum/material/gooey/ectoplasm
+	name = "ectoplasm"
+	desc = "Residual spiritual matter from a ghost or wraith. Latent energies swirl within it."
+	color = "#ccffcc"
+	dense = 1
+	thermal = 1
 
 ABSTRACT_TYPE(/datum/material/rubber)
 /datum/material/rubber
@@ -541,12 +609,28 @@ ABSTRACT_TYPE(/datum/material/rubber)
 	electrical = 1
 	hard = 3
 	dense = 4
+	chemical = 2
 
 /datum/material/rubber/synthrubber
+	name = "synthrubber"
+	desc = "A synthetic rubber compound chemically manufactured from petroleum products."
+	color = "#FF0000"
 
 /datum/material/rubber/synthblubber
+	name = "synthblubber"
+	desc = "A synthetic rubber compound hardened for exposed underwater usage."
+	color = "#2898ba"
+	thermal = 1
+	hard = 5
+	dense = 6
 
 /datum/material/rubber/latex
+	name = "latex"
+	desc = "A rubber compound harvested from trees and refined into a useable form."
+	color = "#f2f2f2"
+	thermal = 3
+	electrical = 2
+	chemical = 3
 
 ABSTRACT_TYPE(/datum/material/woody)
 /datum/material/woody
@@ -560,10 +644,27 @@ ABSTRACT_TYPE(/datum/material/woody)
 	flammable = TRUE
 
 /datum/material/woody/wood
+	name = "wood"
+	desc = "Sturdy fiberous biomatter from a tree."
+	color = "#331f16"
+	texture = "wood"
+	texture_blend = BLEND_ADD
 
 /datum/material/woody/bamboo
+	name = "bamboo"
+	desc = "Fiberous biomatter from a giant grass."
+	color = "#544c24"
+	texture = "bamboo"
+	texture_blend = BLEND_ADD
+	hard = 3
+	dense = 3
 
 /datum/material/woody/cardboard
+	name = "cardboard"
+	desc = "A pliable wooden cardstock used for making boxes and whatnot."
+	color = "#d3b173"
+	density = 2
+	hard = 1
 
 //misc materials that dont really count as something else
 
