@@ -16,8 +16,6 @@
 	dir = SOUTH
 	initialize_directions = SOUTH|NORTH|WEST
 
-	var/flipped = 0
-
 	var/id_tag
 	var/master_id
 	var/on = 0
@@ -41,19 +39,21 @@
 	var/frequency
 
 	update_icon()
-		if(node_in1&&node_in2&&node_out)
-			icon_state = "intact[flipped?"_flipped":""]_[on?"on":"off"]"
+		if(node_in1 && node_in2 && node_out) //stuff used by this specific orientation of mixer pump
+			icon_state = "intact_[on?"on":"off"]"
 		else
-			var/node_in1_direction = get_dir(src, node_in1)
-			var/node_in2_direction = get_dir(src, node_in2)
-
-			var/node_out_bit = (node_out)?(1):(0)
-
-			icon_state = "exposed_[node_in1_direction|node_in2_direction]_[node_out_bit]_off"
-
-			on = 0
-
+			update_icon_generic()
 		return
+
+	update_icon_generic() //stuff shared between all shapes of mixer pump
+		var/node_in1_direction = get_dir(src, node_in1)
+		var/node_in2_direction = get_dir(src, node_in2)
+
+		var/node_out_bit = (node_out)?(1):(0)
+
+		icon_state = "exposed_[node_in1_direction|node_in2_direction]_[node_out_bit]_off"
+
+		on = 0
 
 	network_disposing(datum/pipe_network/reference)
 		if (network_in1 == reference)
@@ -67,26 +67,17 @@
 		..()
 		switch(dir)
 			if(NORTH)
-				if(flipped)
-					initialize_directions = NORTH|WEST|SOUTH
-				else
-					initialize_directions = NORTH|EAST|SOUTH
+				initialize_directions = NORTH|EAST|SOUTH
 			if(EAST)
-				if(flipped)
-					initialize_directions = EAST|NORTH|WEST
-				else
-					initialize_directions = EAST|SOUTH|WEST
+				initialize_directions = EAST|SOUTH|WEST
 			if(SOUTH)
-				if(flipped)
-					initialize_directions = SOUTH|EAST|NORTH
-				else
-					initialize_directions = SOUTH|WEST|NORTH
+				initialize_directions = SOUTH|WEST|NORTH
 			if(WEST)
-				if(flipped)
-					initialize_directions = WEST|SOUTH|EAST
-				else
-					initialize_directions = WEST|NORTH|EAST
+				initialize_directions = WEST|NORTH|EAST
 
+		NewGeneric()
+
+	NewGeneric() //stuff shared between all shapes of mixer pump
 		air_in1 = new /datum/gas_mixture
 		air_in2 = new /datum/gas_mixture
 		air_out = new /datum/gas_mixture
@@ -322,9 +313,12 @@
 		if(node_in1 && node_out) return
 
 		var/node_out_connect = dir
-		var/node_in1_connect = flipped ? turn(dir, 90) : turn(dir, -90)
+		var/node_in1_connect = turn(dir, -90)
 		var/node_in2_connect = turn(dir, -180)
 
+		initializeGeneric(node_out_connect, node_in1_connect, node_in2_connect)
+
+	initializeGeneric(node_out_connect, node_in1_connect, node_in2_connect)
 		for(var/obj/machinery/atmospherics/target in get_step(src,node_in1_connect))
 			if(target.initialize_directions & get_dir(target,src))
 				node_in1 = target
@@ -423,7 +417,69 @@
 
 /obj/machinery/atmospherics/mixer/flipped
 	icon_state = "intact_flipped_off"
-	flipped = 1
+
+	update_icon()
+		if(node_in1 && node_in2 && node_out)
+			icon_state = "intact_flipped_[on?"on":"off"]"
+		else
+			update_icon_generic()
+		return
+
+	New()
+		..()
+		switch(dir)
+			if(NORTH)
+				initialize_directions = NORTH|WEST|SOUTH
+			if(EAST)
+				initialize_directions = EAST|NORTH|WEST
+			if(SOUTH)
+				initialize_directions = SOUTH|EAST|NORTH
+			if(WEST)
+				initialize_directions = WEST|SOUTH|EAST
+
+		NewGeneric()
+
+	initialize()
+		if(node_in1 && node_out) return
+
+		var/node_out_connect = dir
+		var/node_in1_connect = turn(dir, 90)
+		var/node_in2_connect = turn(dir, -180)
+
+		initializeGeneric(node_out_connect, node_in1_connect, node_in2_connect)
+
+/obj/machinery/atmospherics/mixer/tJunction
+	icon_state = "intact_tJunction_off"
+
+	update_icon()
+		if(node_in1 && node_in2 && node_out)
+			icon_state = "intact_tJunction_[on?"on":"off"]"
+		else
+			update_icon_generic()
+		return
+
+	New()
+		..()
+		switch(dir)
+			if(NORTH)
+				initialize_directions = NORTH|WEST|EAST
+			if(EAST)
+				initialize_directions = EAST|NORTH|SOUTH
+			if(SOUTH)
+				initialize_directions = SOUTH|EAST|WEST
+			if(WEST)
+				initialize_directions = WEST|SOUTH|NORTH
+
+		NewGeneric()
+
+	initialize()
+		if(node_in1 && node_out) return
+
+		var/node_out_connect = dir
+		var/node_in1_connect = turn(dir, 90)
+		var/node_in2_connect = turn(dir, -90)
+
+		initializeGeneric(node_out_connect, node_in1_connect, node_in2_connect)
 
 
 #undef _SET_SIGNAL_GAS
