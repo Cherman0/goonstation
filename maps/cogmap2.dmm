@@ -65421,6 +65421,13 @@
 	},
 /turf/simulated/floor/orangeblack,
 /area/station/maintenance/central)
+"erj" = (
+/obj/machinery/atmospherics/pipe/manifold{
+	dir = 8;
+	level = 2
+	},
+/turf/simulated/floor,
+/area/space)
 "erl" = (
 /obj/machinery/conveyor/WE{
 	name = "cargo belt - east";
@@ -65590,6 +65597,9 @@
 	},
 /turf/simulated/floor/dirt,
 /area/station/ranch)
+"eUx" = (
+/turf/simulated/floor/plating/jen,
+/area/space)
 "eUM" = (
 /obj/machinery/conveyor/WE{
 	name = "cargo belt - east";
@@ -66103,6 +66113,13 @@
 	},
 /turf/simulated/floor/orangeblack,
 /area/station/security/checkpoint/podbay)
+"gQh" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/decal/tile_edge/stripe/extra_big{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/space)
 "gTd" = (
 /mob/living/critter/small_animal/cockroach,
 /turf/simulated/floor/grime,
@@ -66153,6 +66170,16 @@
 	dir = 10
 	},
 /area/station/solar/north)
+"hbB" = (
+/obj/machinery/door/airlock/pyro/glass/engineering{
+	dir = 4;
+	name = "Power Room";
+	req_access = null
+	},
+/obj/access_spawn/engineering_atmos,
+/obj/firedoor_spawn,
+/turf/simulated/floor,
+/area/space)
 "hbJ" = (
 /obj/stool/chair/office,
 /obj/landmark/start{
@@ -66554,6 +66581,17 @@
 	},
 /turf/simulated/floor/grey/blackgrime,
 /area/station/hangar/science)
+"igK" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 2;
+	name = "Mixing Port"
+	},
+/turf/simulated/floor,
+/area/space)
+"ike" = (
+/obj/machinery/manufacturer/gas,
+/turf/simulated/floor,
+/area/space)
 "iko" = (
 /obj/submachine/chem_extractor{
 	dir = 4;
@@ -66614,6 +66652,12 @@
 /obj/wingrille_spawn/auto/crystal/reinforced,
 /turf/simulated/floor/plating,
 /area/station/security/brig)
+"iol" = (
+/obj/decal/tile_edge/stripe/extra_big{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/space)
 "ipl" = (
 /obj/machinery/conveyor/EW{
 	name = "cargo belt - west";
@@ -66627,6 +66671,10 @@
 	},
 /turf/simulated/floor/shuttlebay,
 /area/station/security/checkpoint/podbay)
+"iqa" = (
+/obj/machinery/portable_atmospherics/pressurizer,
+/turf/simulated/floor,
+/area/space)
 "ism" = (
 /obj/cable{
 	icon_state = "2-4"
@@ -66874,6 +66922,13 @@
 	},
 /turf/unsimulated/floor/shuttle,
 /area/shuttle/research/outpost)
+"jiE" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1;
+	name = "Mixing Port"
+	},
+/turf/simulated/floor,
+/area/space)
 "jjF" = (
 /obj/disposalpipe/segment,
 /obj/submachine/weapon_vendor/security,
@@ -66940,6 +66995,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/northeast)
+"jvB" = (
+/obj/machinery/door/airlock/pyro/engineering{
+	dir = 4;
+	name = "Power Transmission Laser";
+	req_access = null
+	},
+/obj/access_spawn/engineering_atmos,
+/obj/firedoor_spawn,
+/turf/simulated/floor,
+/area/space)
 "jxi" = (
 /obj/machinery/conveyor/SN{
 	name = "cargo belt - north";
@@ -67039,6 +67104,13 @@
 	},
 /turf/unsimulated/floor/shuttle,
 /area/shuttle/research/outpost)
+"jLq" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8;
+	name = "Mixing Port"
+	},
+/turf/simulated/floor,
+/area/space)
 "jMm" = (
 /obj/machinery/conveyor/WE{
 	name = "cargo belt - east";
@@ -67408,6 +67480,26 @@
 	icon_state = "engine_caution_south"
 	},
 /area/station/mining/staff_room)
+"kNG" = (
+/obj/table/auto,
+/obj/item/device/transfer_valve{
+	pixel_y = 11;
+	pixel_x = 6
+	},
+/obj/item/device/transfer_valve{
+	pixel_y = 8;
+	pixel_x = 2
+	},
+/obj/item/device/transfer_valve{
+	pixel_y = 5;
+	pixel_x = 5
+	},
+/obj/item/device/transfer_valve{
+	pixel_y = 1;
+	pixel_x = 3
+	},
+/turf/simulated/floor,
+/area/space)
 "kOo" = (
 /obj/machinery/shuttle/engine/heater/seaheater_left{
 	pixel_y = -14;
@@ -68270,6 +68362,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/central)
+"mOk" = (
+/obj/machinery/portable_atmospherics/pump,
+/turf/simulated/floor,
+/area/space)
 "mPa" = (
 /obj/machinery/door/airlock/pyro/glass/engineering,
 /turf/simulated/floor/engine,
@@ -68468,6 +68564,13 @@
 	icon_state = "4-8"
 	},
 /turf/space,
+/area/space)
+"nsS" = (
+/obj/machinery/dispenser,
+/obj/decal/tile_edge/stripe/extra_big{
+	dir = 4
+	},
+/turf/simulated/floor,
 /area/space)
 "nuC" = (
 /obj/table/auto,
@@ -69619,6 +69722,29 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/southeast)
+"rkZ" = (
+/obj/table/auto,
+/obj/item/device/analyzer/atmospheric{
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/obj/item/wrench{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/extinguisher{
+	pixel_x = 12;
+	pixel_y = 16
+	},
+/obj/item/chem_grenade/firefighting{
+	pixel_x = 10
+	},
+/obj/item/chem_grenade/firefighting{
+	pixel_x = 18;
+	pixel_y = 3
+	},
+/turf/simulated/floor,
+/area/space)
 "rpd" = (
 /obj/machinery/conveyor/SN{
 	name = "cargo belt - north";
@@ -69666,6 +69792,10 @@
 /obj/item/reagent_containers/food/drinks/drinkingglass/icing,
 /turf/simulated/floor/white,
 /area/station/crew_quarters/kitchen)
+"rvi" = (
+/obj/machinery/portable_atmospherics/scrubber,
+/turf/simulated/floor,
+/area/space)
 "rvn" = (
 /obj/wingrille_spawn/auto,
 /turf/simulated/floor,
@@ -70496,6 +70626,13 @@
 /obj/storage/closet/emergency,
 /turf/simulated/floor/plating,
 /area/station/maintenance/northeast)
+"tOT" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4;
+	name = "Mixing Port"
+	},
+/turf/simulated/floor,
+/area/space)
 "tPG" = (
 /obj/grille/catwalk{
 	dir = 5
@@ -70846,6 +70983,13 @@
 	icon_state = "blue1"
 	},
 /area/station/crew_quarters/arcade/dungeon)
+"vls" = (
+/obj/machinery/atmospherics/valve{
+	name = "mixing valve";
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/space)
 "vlG" = (
 /obj/machinery/atmospherics/pipe/simple/color_pipe/cyan_pipe{
 	dir = 10
@@ -71017,6 +71161,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/hangar/science)
+"vPK" = (
+/obj/machinery/portable_atmospherics/canister/toxins,
+/turf/simulated/floor,
+/area/space)
 "vQh" = (
 /obj/item/device/radio/intercom/cargo,
 /turf/simulated/floor/plating,
@@ -71027,6 +71175,10 @@
 	},
 /obj/firedoor_spawn,
 /turf/simulated/floor/caution/westeast,
+/area/space)
+"vTc" = (
+/obj/machinery/portable_atmospherics/canister/air/large,
+/turf/simulated/floor,
 /area/space)
 "vUy" = (
 /obj/machinery/conveyor/EW{
@@ -71483,6 +71635,12 @@
 /obj/machinery/portable_atmospherics/scrubber,
 /turf/simulated/floor/plating,
 /area/station/maintenance/central)
+"xOW" = (
+/obj/machinery/atmospherics/valve{
+	name = "mixing valve"
+	},
+/turf/simulated/floor,
+/area/space)
 "xRj" = (
 /obj/table/wood/auto,
 /obj/item/storage/box/nerd_kit{
@@ -111339,12 +111497,12 @@ bVz
 bVz
 aFb
 aFb
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+aFb
+aFb
+aan
+aFb
+aFb
+aFb
 aFb
 aaa
 wbR
@@ -111640,14 +111798,14 @@ bVz
 bVz
 bVz
 aFb
+eUx
+eUx
+eUx
 aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aFb
+aan
 aaa
 aaa
 wbR
@@ -111942,14 +112100,14 @@ bVz
 bVz
 bVz
 aFb
+eUx
+eUx
+eUx
 aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aFb
+aan
 aaa
 wbR
 wbR
@@ -112244,14 +112402,14 @@ bVz
 bVz
 bVz
 aFb
+eUx
+eUx
+eUx
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aFb
-aFb
+aan
+aan
 aaa
 wbR
 fag
@@ -112546,9 +112704,9 @@ bVz
 bVz
 bVz
 aFb
-aaa
-aaa
-aaa
+eUx
+eUx
+eUx
 aaa
 aaa
 aaa
@@ -112848,9 +113006,9 @@ bVz
 bVz
 bVz
 aFb
-aaa
-aaa
-aaa
+eUx
+eUx
+eUx
 aaa
 aaa
 aaa
@@ -113150,9 +113308,9 @@ bVz
 bVz
 bVz
 aFb
-aaa
-aaa
-aaa
+eUx
+eUx
+eUx
 aaa
 aaa
 gev
@@ -114058,10 +114216,10 @@ bVz
 bVz
 bVz
 aFb
-aaa
-aaa
-aaa
-aaa
+aFb
+jvB
+aFb
+aFb
 aFb
 aFb
 aaa
@@ -114360,11 +114518,11 @@ aFb
 bVz
 bVz
 aFb
-aaa
-aaa
-aaa
-aaa
-aaa
+igK
+xOW
+erj
+xOW
+jiE
 aFb
 aaa
 wbR
@@ -114662,11 +114820,11 @@ aFb
 bVz
 bVz
 aFb
-aaa
-aaa
-aaa
-aaa
-aaa
+tOT
+cao
+vls
+cao
+cao
 aFb
 aaa
 aaa
@@ -114964,11 +115122,11 @@ biV
 bVz
 bVz
 aFb
-aaa
-aaa
-aaa
-aaa
-aaa
+vls
+cao
+jLq
+mOk
+iqa
 aFb
 aaa
 wbR
@@ -115266,11 +115424,11 @@ aFb
 bVz
 bVz
 aFb
-aaa
-aaa
-aaa
-aaa
-aaa
+jLq
+cao
+cao
+rvi
+rvi
 aFb
 aaa
 wbR
@@ -115568,11 +115726,11 @@ aFb
 lSi
 bVz
 aFb
-aaa
-aaa
-aaa
-aaa
-aaa
+ike
+cao
+cao
+vTc
+vTc
 aFb
 aah
 aFb
@@ -115870,11 +116028,11 @@ aFb
 lSi
 bVz
 aFb
-aaa
-aaa
-aaa
-aaa
-aaa
+nsS
+iol
+iol
+gQh
+gQh
 aFb
 aaa
 aFb
@@ -116172,11 +116330,11 @@ aFb
 lSi
 bVz
 aFb
-aaa
-aaa
-aaa
-aaa
-aaa
+wbR
+hbB
+wbR
+wbR
+wbR
 aFb
 aaa
 aFb
@@ -116474,11 +116632,11 @@ aFb
 lSi
 bVz
 aFb
-aaa
-aaa
-aaa
-aaa
-aaa
+rkZ
+cao
+vPK
+vPK
+vPK
 aFb
 aaa
 aFb
@@ -116776,11 +116934,11 @@ rCJ
 sBq
 bVz
 aFb
-aaa
-aaa
-aaa
-aaa
-aaa
+kNG
+cao
+vPK
+vPK
+vPK
 aFb
 aaS
 aaB
