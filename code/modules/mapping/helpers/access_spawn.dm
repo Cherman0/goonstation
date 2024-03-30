@@ -54,16 +54,8 @@
 	name = "pathology spawn"
 	#ifdef CREATE_PATHOGENS
 	req_access = list(access_pathology)
-	#elif defined(SCIENCE_PATHO_MAP)
 	req_access = list(access_research)
-	#else
-	req_access = list(access_medical)
-	#endif
-	#ifdef SCIENCE_PATHO_MAP
 	color = RESEARCH
-	#else
-	color = MEDICAL
-	#endif
 
 /obj/mapping_helper/access/medical
 	name = "medical access spawn"
@@ -79,16 +71,6 @@
 	name = "morgue access spawn"
 	req_access = list(access_morgue)
 	color = MORGUE_BLACK
-
-/obj/mapping_helper/access/medlab
-	name = "medlab access spawn"
-	req_access = list(access_medlab)
-	color = MEDICAL
-
-/obj/mapping_helper/access/robotics
-	name = "robotics access spawn"
-	req_access = list(access_robotics)
-	color = MEDICAL
 
 //////////// Engineering ////
 /obj/mapping_helper/access/cargo
@@ -195,6 +177,16 @@
 /obj/mapping_helper/access/robotdepot
 	name = "robot depot access spawn"
 	req_access = list(access_robotdepot)
+	color = RESEARCH
+
+/obj/mapping_helper/access/medlab
+	name = "medlab access spawn"
+	req_access = list(access_medlab)
+	color = RESEARCH
+
+/obj/mapping_helper/access/robotics
+	name = "robotics access spawn"
+	req_access = list(access_robotics)
 	color = RESEARCH
 
 //////////// Civilian ////
