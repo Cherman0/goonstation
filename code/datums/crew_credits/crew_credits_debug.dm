@@ -59,7 +59,7 @@
 			what_role = "Medical Director"
 
 		else
-			what_role = pick(200; "Medical Doctor", "Roboticist", "Geneticist")
+			what_role = "Medical Doctor"
 
 		src.crew_tab_data[CREW_TAB_SECTION_MEDICAL] += src.generate_fake_crew_member(
 			real_name = src.fake_carbon_name(),
@@ -77,7 +77,7 @@
 			what_role = "Research Director"
 
 		else
-			what_role = "Scientist"
+			what_role = pick(200; "Scientist", "Roboticist", "Geneticist")
 
 		src.crew_tab_data[CREW_TAB_SECTION_SCIENCE] += src.generate_fake_crew_member(
 			real_name = src.fake_carbon_name(),

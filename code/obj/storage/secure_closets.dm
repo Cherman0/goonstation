@@ -633,13 +633,7 @@ ADMIN_INTERACT_PROCS(/obj/storage/secure/closet, proc/break_open)
 	icon_state = "medical_clothes"
 	spawn_contents = list(/obj/item/storage/backpack/medic,
 	/obj/item/storage/backpack/satchel/medic,
-	/obj/item/storage/backpack/robotics,
-	/obj/item/storage/backpack/genetics,
-	/obj/item/storage/backpack/satchel/robotics,
-	/obj/item/storage/backpack/satchel/genetics,
 	/obj/item/storage/box/clothing/medical,
-	/obj/item/storage/box/clothing/geneticist,
-	/obj/item/storage/box/clothing/roboticist,
 	/obj/item/clothing/suit/wintercoat/medical,
 	/obj/item/storage/belt/medical,
 	/obj/item/storage/box/stma_kit,
@@ -704,11 +698,17 @@ ADMIN_INTERACT_PROCS(/obj/storage/secure/closet, proc/break_open)
 	spawn_contents = list(/obj/item/tank/air,
 	/obj/item/storage/backpack/research,
 	/obj/item/storage/box/clothing/research,
+	/obj/item/storage/box/clothing/geneticist,
+	/obj/item/storage/box/clothing/roboticist,
 	/obj/item/clothing/suit/wintercoat/research,
 	/obj/item/clothing/gloves/latex,
 	/obj/item/clothing/mask/gas,
 	/obj/item/device/reagentscanner,
 	/obj/item/device/radio/headset/research)
+	/obj/item/storage/backpack/robotics,
+	/obj/item/storage/backpack/genetics,
+	/obj/item/storage/backpack/satchel/robotics,
+	/obj/item/storage/backpack/satchel/genetics,
 
 /obj/storage/secure/closet/research/chemical
 	name = "chemical storage locker"

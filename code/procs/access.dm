@@ -227,18 +227,12 @@
 			return list(access_research, access_research_director, access_dwaine_superuser,
 						access_tech_storage, access_maint_tunnels, access_heads, access_eva, access_tox,
 						access_tox_storage, access_chemistry, access_teleporter, access_ai_upload, access_researchfoyer, access_telesci,
-						access_artlab, access_robotdepot,
-						#ifdef SCIENCE_PATHO_MAP
-						, access_pathology
-						#endif
+						access_artlab, access_robotdepot, access_medlab, access_robotics, access_pathology
 						)
 		if("Medical Director")
 			return list(access_robotics, access_medical, access_morgue,
 						access_maint_tunnels, access_tech_storage, access_medical_lockers,
-						access_medlab, access_heads, access_eva, access_medical_director, access_ai_upload, access_teleporter
-						#ifndef SCIENCE_PATHO_MAP
-						, access_pathology
-						#endif
+						access_medlab, access_heads, access_eva, access_medical_director, access_ai_upload, access_teleporter, access_pathology
 						)
 		if("Chief Engineer")
 			return list(access_engineering, access_maint_tunnels, access_external_airlocks,
@@ -282,16 +276,6 @@
 		///////////////////////////// Medical
 		if("Medical Doctor")
 			return list(access_medical, access_medical_lockers, access_morgue, access_maint_tunnels)
-		if("Geneticist")
-			return list(access_medical, access_medical_lockers, access_morgue, access_medlab, access_maint_tunnels)
-		if("Pathologist")
-			#ifdef SCIENCE_PATHO_MAP
-			return list(access_tox, access_tox_storage, access_research, access_chemistry, access_pathology, access_researchfoyer)
-			#else
-			return list(access_medical, access_medical_lockers, access_morgue, access_pathology, access_maint_tunnels)
-			#endif
-		if("Roboticist")
-			return list(access_robotics, access_tech_storage, access_medical, access_medical_lockers, access_morgue, access_maint_tunnels)
 		if("Pharmacist")
 			return list(access_research,access_tech_storage, access_maint_tunnels, access_chemistry,
 						access_medical_lockers, access_medical, access_morgue, access_researchfoyer)
@@ -306,7 +290,14 @@
 
 		///////////////////////////// Science
 		if("Scientist")
-			return list(access_tox, access_tox_storage, access_research, access_chemistry, access_researchfoyer, access_artlab, access_telesci, access_robotdepot)
+			return list(access_tox, access_tox_storage, access_research, access_chemistry, access_researchfoyer, access_artlab, access_telesci)
+		if("Geneticist")
+			return list(access_medical, access_medical_lockers, access_morgue, access_medlab, access_research, access_researchfoyer)
+		if("Pathologist")
+			return list(access_medical, access_medical_lockers, access_morgue, access_pathology, access_maint_tunnels, access_research, access_researchfoyer)
+		if("Roboticist")
+			return list(access_robotics, access_tech_storage, access_medical, access_medical_lockers, access_morgue access_research, access_researchfoyer,
+						access_robotdepot, access_maint_tunnels, access_tech_storage)
 		if("Chemist")
 			return list(access_research, access_chemistry, access_researchfoyer)
 		if("Toxins Researcher")

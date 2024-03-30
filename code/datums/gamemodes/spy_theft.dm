@@ -420,6 +420,7 @@
 
 	station_bounties[/obj/item/device/radio/headset/engineer] = 1
 	station_bounties[/obj/item/device/radio/headset/medical] = 1
+	station_bounties[/obj/item/device/radio/headset/medsci] = 1
 	station_bounties[/obj/item/device/radio/headset/research] = 1
 	station_bounties[/obj/item/device/radio/headset/shipping] = 1
 	station_bounties[/obj/item/device/radio/headset/mail] = 1

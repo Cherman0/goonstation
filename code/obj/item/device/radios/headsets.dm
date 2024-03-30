@@ -337,6 +337,21 @@
 	icon_override = "sci"
 	icon_tooltip = "Scientist"
 
+/obj/item/device/radio/headset/medsci
+	name = "medical science headset"
+	desc = "Worn by those indecisive employees who fall somewhere in between medicine and science."
+	icon_state = "research headset"
+	secure_frequencies = list(
+		"r" = R_FREQ_RESEARCH,
+		"m" = R_FREQ_MEDICAL
+		)
+	secure_classes = list(
+		"r" = RADIOCL_RESEARCH,
+		"m" = R_FREQ_MEDICAL
+		)
+	icon_override = "sci"
+	icon_tooltip = "Scientist"
+
 /obj/item/device/radio/headset/civilian
 	name = "civilian headset"
 	desc = "These headsets are used by the civilian staff, who are employed to keep the station clean, fed, and productive. As if."

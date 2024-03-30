@@ -185,21 +185,22 @@
 		name = "Medical PDA"
 		icon_state = "pda-m"
 		setup_default_cartridge = /obj/item/disk/data/cartridge/medical
-		mailgroups = list(MGD_MEDBAY ,MGD_PARTY)
+		mailgroups = list(MGD_MEDBAY,MGD_PARTY)
 		alertgroups = list(MGA_MAIL, MGA_RADIO, MGA_DEATH, MGA_MEDCRIT, MGA_CLONER, MGA_CRISIS)
 
-		robotics
-			name = "Robotics PDA"
-			mailgroups = list(MGD_MEDRESEACH,MGD_PARTY)
-			alertgroups = list(MGA_MAIL, MGA_RADIO, MGA_DEATH, MGA_MEDCRIT, MGA_CLONER, MGA_CRISIS, MGA_SALES)
-			default_muted_mailgroups = list(MGA_SALES)
+	robotics
+		name = "Robotics PDA"
+		icon_state = "pda-tox"
+		setup_default_cartridge = /obj/item/disk/data/cartridge/medical
+		mailgroups = list(MGD_MEDRESEACH, MGD_PARTY, MGD_SCIENCE)
+		alertgroups = list(MGA_MAIL, MGA_RADIO, MGA_DEATH, MGA_MEDCRIT, MGA_CLONER, MGA_CRISIS, MGA_SALES)
+		default_muted_mailgroups = list(MGA_SALES)
 
 	genetics
 		name = "Genetics PDA"
 		icon_state = "pda-gen"
 		setup_default_cartridge = /obj/item/disk/data/cartridge/genetics
-		mailgroups = list(MGD_MEDBAY,MGD_MEDRESEACH,MGD_PARTY)
-		alertgroups = list(MGA_MAIL, MGA_RADIO, MGA_SALES)
+		mailgroups = list(MGD_MEDBAY, MGD_MEDRESEACH, MGD_PARTY, MGD_SCIENCE)
 
 	security
 		name = "Security PDA"

@@ -177,7 +177,7 @@
 	/obj/item/clothing/shoes/white,\
 	/obj/item/clothing/suit/labcoat/genetics,\
 	/obj/item/clothing/suit/wintercoat/genetics,\
-	/obj/item/device/radio/headset/medical,\
+	/obj/item/device/radio/headset/medsci,\
 	/obj/item/device/pda2/genetics)
 
 /obj/item/storage/box/clothing/roboticist
@@ -186,8 +186,8 @@
 	/obj/item/clothing/shoes/black,\
 	/obj/item/clothing/suit/labcoat/robotics,\
 	/obj/item/clothing/suit/wintercoat/robotics,\
-	/obj/item/device/radio/headset/medical,\
-	/obj/item/device/pda2/medical/robotics,\
+	/obj/item/device/radio/headset/medsci,\
+	/obj/item/device/pda2/robotics,\
 	/obj/item/clothing/gloves/latex)
 
 // Research Equipment

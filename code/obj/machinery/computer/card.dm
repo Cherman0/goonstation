@@ -636,7 +636,7 @@
 	civilian_access_list = list(access_maint_tunnels, access_tech_storage)
 	engineering_access_list = null
 	supply_access_list = null
-	research_access_list = list(access_tox, access_tox_storage, access_research, access_chemistry, access_researchfoyer, access_artlab, access_telesci, access_robotdepot)
+	research_access_list = list(access_tox, access_tox_storage, access_research, access_chemistry, access_researchfoyer, access_artlab, access_telesci, access_robotdepot, access_medlab, access_robotics, access_pathology)
 	security_access_list = null
 	command_access_list = list(access_eva)
 

@@ -80,8 +80,8 @@ var/list/page_departments = list(
 var/list/command_jobs = list("Captain", "Medical Director", "Research Director", "Head of Personnel", "Head of Security", "Chief Engineer", "Communications Officer"/*"Clown"*/)
 var/list/security_jobs = list("Head of Security", "Nanotrasen Security Consultant", "Nanotrasen Special Operative", "Security Officer", "Security Assistant", "Detective")
 var/list/engineering_jobs = list("Chief Engineer", "Engineer", "Miner", "Quartermaster")
-var/list/medical_jobs = list("Medical Director", "Medical Doctor", "Roboticist", "Geneticist")
-var/list/science_jobs = list("Research Director", "Scientist")
+var/list/medical_jobs = list("Medical Director", "Medical Doctor")
+var/list/science_jobs = list("Research Director", "Scientist", "Roboticist", "Geneticist")
 var/list/medsci_jobs = medical_jobs + science_jobs
 var/list/service_jobs = list("Head of Personnel", "Bartender", "Chef", "Botanist", "Rancher", "Angler", "Clown", "Chaplain", "Janitor")
 

@@ -274,6 +274,8 @@
 		/obj/item/device/radio/headset/multifreq,
 		/obj/item/device/radio/headset/medical,
 		/obj/item/device/radio/headset/medical,
+		/obj/item/device/radio/headset/medsci,
+		/obj/item/device/radio/headset/medsci,
 		/obj/item/device/radio/headset/security,
 		/obj/item/device/radio/headset/security,
 		/obj/item/device/radio/headset/engineer,
