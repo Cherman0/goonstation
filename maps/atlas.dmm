@@ -3946,16 +3946,6 @@
 "axc" = (
 /turf/simulated/floor,
 /area/station/mining/staff_room)
-"axf" = (
-/obj/noticeboard/persistent{
-	name = "Mechanics Workshop persistent notice board";
-	persistent_id = "mechanics";
-	pixel_x = 32;
-	pixel_y = 0;
-	dir = 4
-	},
-/turf/simulated/floor,
-/area/station/engine/elect)
 "axi" = (
 /obj/mapping_helper/wingrille_spawn/auto/reinforced,
 /turf/simulated/floor/plating,
@@ -4750,11 +4740,8 @@
 /obj/cable{
 	icon_state = "4-8"
 	},
-/obj/cable{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/plating/random,
-/area/station/maintenance/southeast)
+/turf/simulated/floor/black,
+/area/station/engine/engineering)
 "aBd" = (
 /turf/simulated/wall/auto/reinforced/supernorn,
 /area/station/maintenance/southeast)
@@ -7590,6 +7577,10 @@
 /area/station/hallway/primary/south)
 "aRA" = (
 /obj/machinery/computer/announcement/station/research,
+/obj/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc/autoname_north,
 /turf/simulated/floor/carpet/green/fancy/edge/ne,
 /area/station/engine/engineering/ce)
 "aRC" = (
@@ -8885,6 +8876,9 @@
 	},
 /obj/mapping_helper/firedoor_spawn,
 /obj/mapping_helper/access/engineering_chief,
+/obj/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/black,
 /area/station/engine/engineering/ce)
 "bfR" = (
@@ -9419,6 +9413,9 @@
 	icon_state = "0-8"
 	},
 /obj/cable/orange,
+/obj/decal/tile_edge/stripe/extra_big{
+	dir = 8
+	},
 /turf/simulated/floor/yellow/side{
 	dir = 10
 	},
@@ -9734,6 +9731,9 @@
 "cEQ" = (
 /obj/stool/chair/office/yellow{
 	dir = 8
+	},
+/obj/cable{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/carpet/green/fancy/edge/east,
 /area/station/engine/engineering/ce)
@@ -11565,6 +11565,11 @@
 	bcolor = "yellow";
 	icon_state = "bedsheet-yellow"
 	},
+/obj/machinery/light{
+	dir = 8;
+	layer = 9.1;
+	pixel_x = -10
+	},
 /turf/simulated/floor/carpet/green/fancy/edge/nw,
 /area/station/engine/engineering/ce)
 "fwI" = (
@@ -12256,6 +12261,12 @@
 	},
 /obj/item/pinpointer/teg_semi{
 	pixel_x = 7
+	},
+/obj/machinery/camera{
+	c_tag = "autotag";
+	dir = 0;
+	name = "autoname - SS13";
+	pixel_y = 20
 	},
 /turf/simulated/floor/carpet/green/fancy/edge/north,
 /area/station/engine/engineering/ce)
@@ -15268,6 +15279,9 @@
 /obj/cable{
 	icon_state = "1-4"
 	},
+/obj/decal/tile_edge/stripe/extra_big{
+	dir = 8
+	},
 /turf/simulated/floor/yellow/side{
 	dir = 9
 	},
@@ -16018,6 +16032,12 @@
 /area/station/engine/core)
 "mdN" = (
 /obj/storage/secure/closet/command/chief_engineer,
+/obj/machinery/firealarm/east{
+	pixel_y = -6
+	},
+/obj/machinery/light_switch/east{
+	pixel_y = 6
+	},
 /turf/simulated/floor/carpet/green/fancy/edge/se,
 /area/station/engine/engineering/ce)
 "mes" = (
@@ -16950,6 +16970,11 @@
 /area/listeningpost/power)
 "nBy" = (
 /obj/storage/crate/rcd/CE,
+/obj/machinery/light{
+	dir = 8;
+	layer = 9.1;
+	pixel_x = -10
+	},
 /turf/simulated/floor/carpet/green/fancy/edge/sw,
 /area/station/engine/engineering/ce)
 "nBF" = (
@@ -19224,6 +19249,9 @@
 	dir = 4
 	},
 /obj/landmark/start/job/chief_engineer,
+/obj/item/device/radio/intercom/engineering{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/green/fancy/edge/west,
 /area/station/engine/engineering/ce)
 "ruk" = (
@@ -20937,6 +20965,9 @@
 /turf/simulated/floor/grass/leafy,
 /area/station/ranch)
 "tYS" = (
+/obj/item/device/radio/intercom/bridge{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/green/fancy/edge/west,
 /area/station/engine/engineering/ce)
 "tZl" = (
@@ -22974,6 +23005,9 @@
 /turf/simulated/floor/black,
 /area/station/engine/engineering)
 "xqY" = (
+/obj/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/yellowblack{
 	dir = 8
 	},
@@ -23140,6 +23174,9 @@
 	},
 /obj/cable/orange{
 	icon_state = "0-2"
+	},
+/obj/decal/tile_edge/stripe/extra_big{
+	dir = 8
 	},
 /turf/simulated/floor/yellow/side{
 	dir = 8
@@ -57539,7 +57576,7 @@ ajW
 ajY
 aRM
 aii
-gzH
+oLf
 wNg
 wNg
 cOW
@@ -57551,7 +57588,7 @@ bky
 uti
 lVZ
 vPa
-xwA
+aYR
 aBd
 sgU
 awz
@@ -59669,7 +59706,7 @@ cxJ
 pPq
 rbp
 lDz
-aBa
+aCs
 vQr
 aXl
 srN
@@ -60873,7 +60910,7 @@ avx
 fWp
 fXR
 fxr
-lAa
+aBa
 fLA
 hWY
 anp
@@ -61175,7 +61212,7 @@ tqQ
 fWp
 fXR
 adu
-lAa
+aBa
 xqJ
 uas
 anp
@@ -64779,7 +64816,7 @@ agd
 agd
 awY
 agd
-axf
+agd
 agd
 ajk
 foh
