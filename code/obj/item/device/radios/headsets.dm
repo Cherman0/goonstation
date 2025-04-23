@@ -128,6 +128,30 @@
 	icon_override = "nt"
 	icon_tooltip = "NanoTrasen Special Operative"
 
+/obj/item/device/radio/headset/command/nt/commander
+	name = "\improper NT Commander's headset"
+	desc = "Issued to NanoTrasen Commanders, this radio headset can access several secure radio channels."
+	secure_frequencies = list(
+		"n" = R_FREQ_NANOTRASEN,
+		"h" = R_FREQ_COMMAND,
+		"g" = R_FREQ_SECURITY,
+		"e" = R_FREQ_ENGINEERING,
+		"r" = R_FREQ_RESEARCH,
+		"m" = R_FREQ_MEDICAL,
+		"c" = R_FREQ_CIVILIAN,
+		)
+	secure_classes = list(
+		"n" = RADIOCL_NANOTRASEN,
+		"h" = RADIOCL_COMMAND,
+		"g" = RADIOCL_SECURITY,
+		"e" = RADIOCL_ENGINEERING,
+		"r" = RADIOCL_RESEARCH,
+		"m" = RADIOCL_MEDICAL,
+		"c" = RADIOCL_CIVILIAN,
+		)
+	icon_override = "ntboss"
+	icon_tooltip = "Nanotrasen Commander"
+
 /obj/item/device/radio/headset/command/nt/consultant
 	icon_tooltip = "NanoTrasen Security Consultant"
 
@@ -486,22 +510,6 @@
 	icon_override = "ghost_buster"
 	icon_tooltip = "Werewolf Hunter"
 
-/obj/item/device/radio/headset/command/nt/commander
-	name = "\improper NT Commander's headset"
-	desc = "Issued to NanoTrasen Commanders, this radio headset can access several secure radio channels."
-	secure_frequencies = list(
-		"n" = R_FREQ_NANOTRASEN,
-		"h" = R_FREQ_COMMAND,
-		"g" = R_FREQ_SECURITY,
-		)
-	secure_classes = list(
-		"n" = RADIOCL_NANOTRASEN,
-		"h" = RADIOCL_COMMAND,
-		"g" = RADIOCL_SECURITY,
-		)
-	icon_override = "ntboss"
-	icon_tooltip = "Nanotrasen Commander"
-
 /obj/item/device/radio/headset/syndicate
 	name = "radio headset"
 	desc = "A radio headset that is also capable of communicating over- wait, isn't that frequency illegal?"
@@ -719,9 +727,10 @@ TYPEINFO(/obj/item/device/radio_upgrade)
 			src.secure_frequencies = list("z" = frequency)
 			src.secure_classes = list("z" = RADIOCL_SYNDICATE)
 
-	// Used by syndieborgs
+	// Crimers gotta crime
 	syndicatechannel
 		name = "syndicate radio channel upgrade"
-		desc = "A device capable of communicating over a private secure radio channel. Can be installed in a radio headset."
+		desc = "A device capable of upgrading a headset to allow access over the syndicate radio channel"
+		icon_state = "syndie_radio_channel_upgrade"
 		secure_frequencies = list("z" = R_FREQ_SYNDICATE)
 		secure_classes = list("z" = RADIOCL_SYNDICATE)
